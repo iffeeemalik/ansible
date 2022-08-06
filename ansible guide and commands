@@ -1,0 +1,32 @@
+ansible
+
+git add README.md 
+git commit -m "my first edit"
+git push origin master
+git show-ref
+
+git clone git@github.com:iffeeemalik/ansible.git
+cd ansible/
+
+sudo nano README.md 
+git add README.md 
+git commit -m "my first edit"
+git push origin master
+sudo apt update 
+sudo apt install ansible
+
+git push origin master
+
+ssh-keygen -t ed25519 -C "ansible"
+
+ssh-copy-id -i ~/.ssh/id_ed25519.pub 10.10.0.89
+
+ansible all --key-file ~/.ssh/ansible -i inventory -m ping
+  
+ansible all -m ping
+  
+ansible all --list-hosts
+
+ansible all -m gather_facts
+
+ansible all -m gather_facts --limit 10.10.0.37
