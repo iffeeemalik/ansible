@@ -4,4 +4,5 @@
 10.10.0.89 # ansible lxc client 1 - proxmox
 [worker]
 10.10.0.90 # ansible lxc client 2 - proxmox
-
+[server]
+10.10.0.94

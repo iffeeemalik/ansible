@@ -43,7 +43,23 @@ ansible master -m apt -a "upgrade=dist" --become --ask-become-pass
 
 nano install_apache.yml
 
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install apache2 package
+    apt:
+      name: apache2
+
+
 ansible-playbook --ask-become-pass install_apache.yml
+
+ansible all -m gather_facts --limit server | grep ansible_distribution
+
+
+
 
 
 
