@@ -1,5 +1,5 @@
-[raspberry]
-10.10.0.37 #raspberry pi
+#[raspberry]
+#10.10.0.37 #raspberry pi
 [master]
 10.10.0.89 # ansible lxc client 1 - proxmox
 [worker]
