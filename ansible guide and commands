@@ -30,3 +30,15 @@ ansible all --list-hosts
 ansible all -m gather_facts
 
 ansible all -m gather_facts --limit 10.10.0.37
+
+ansible all -m apt -a update_cache=true (this command will fail. this command basically is asking for sudo privileges i.e. equivalent to sudo in ansible)
+
+ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+ansible master -m apt -a name=zsh --become --ask-become-pass
+
+ansible master -m apt -a "name=snapd state=latest" --become --ask-become-pass
+
+ansible master -m apt -a "upgrade=dist" --become --ask-become-pass
+
+
